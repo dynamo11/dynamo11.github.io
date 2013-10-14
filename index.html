@@ -31,9 +31,6 @@ Obj.style.display = "none";
 	}
 	}
 }
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
 function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
     var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
@@ -47,7 +44,9 @@ function MM_findObj(n, d) { //v4.01
   for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
   if(!x && d.getElementById) x=d.getElementById(n); return x;
 }
-
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
 function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
@@ -57,17 +56,17 @@ function MM_swapImage() { //v3.0
 </head>
 
 
-<body bgcolor="#FF6600" topmargin="0" marginwidth="0" marginheight="0" onload="MM_preloadImages('images/onglets-ecole-ON.png')">
+<body bgcolor="#FF6600" topmargin="0" marginwidth="0" marginheight="0" onload="MM_preloadImages('images/onglets-ecole-ON.png','images/onglet-ecoles-ON.png','images/onglet-asso-ON.png','images/onglet-activites-ON.png','images/onglet-infos-ON.png','images/onglet-dossiers-ON.png','images/onglet-contact-ON.png')">
 
 <!--*************************** 
 CALQUE AVERTISSEMENT 
 *******************************-->
 
-			<div class="calqueTemp" align="center" id="OBJ_3"  OnClick="Masque_OBJ('OBJ_3');">
-	<div class="page" align="left" style="margin-bottom:auto; margin-top: 50px; background-color:transparent;">
-    <!--<img src="images/logo-TG-temp2.png" alt="Logo Thierry Gourdin" align="left" height="27px" style="margin-top: -8px; margin-left:13px; margin-right:5px;" /><p class="headerTemp" style="margin-top:10px;">Thierry Gourdin&nbsp;&nbsp;Identités graphiques</p>-->
+			<!--<div class="calqueTemp" align="center" id="OBJ_3"  OnClick="Masque_OBJ('OBJ_3');">
+	<div class="page" align="left" style="margin-top: 3%; background-color:transparent;">
+  
     
-    <p class="edito-txt" style="opacity:0.95; font-family: HelveticaNeueLTPro-Lt, Helvetica, Arial, sans-serif; color:#000; margin-right:350px; font-size:14pt; line-height:16pt;"><span style="font-size:20pt;">Bonjour et bienvenue !</span><br /><br />
+    <p class="edito-txt" style="opacity:0.95; font-family: HelveticaNeueLTPro-Lt, Helvetica, Arial, sans-serif; color:#000; margin-right:350px; font-size:14pt; line-height:16pt; margin-bottom:0px;"><span style="font-size:20pt;">Bonjour et bienvenue !</span><br /><br />
     Le site dynamo11.org est en cours d'installation, nous nous excusons d'avance pour la gêne occasionnée.<br /><br />
     
     Cependant, vous trouverez derrière ce calque une page unique qui vous permettra, en attendant le site complet, d'avoir quelques informations importantes sur notre association et sur les groupes Dynamo11 qui représentent les parents d'élèves dans les écoles du quartier Nation / Charonne / Voltaire.<br /><br />
@@ -83,7 +82,7 @@ CALQUE AVERTISSEMENT
     <p class="avertissement"><a href="#" class="avertissement" OnClick="Masque_OBJ('OBJ_3');" style="margin-top:-5px; padding-left:5px; padding-top:4px;" >x&nbsp;&nbsp;&nbsp;masquer ce calque</a></p>
 	</div>
 </div>
-
+-->
 
 <!--***************************
 BLOC HEADER 
@@ -93,12 +92,67 @@ BLOC HEADER
 <div class="backpage">
 
 		    <div class="header1">
-        <img src="images/logo-dynamo-header-big.png" width="248" height="96" alt="Logo Dynamo11" align="left" style="margin-top:17px; margin-left:-5px;" />
+        <a href="index.html" title="Retour à la page d'accueil"><img src="images/logo-dynamo-header-big.png" width="248" height="96" alt="Logo Dynamo11" align="left" class="logo-header" /></a>
         <img src="images/contactez-nous-header-temp.png" width="121" height="137" alt="Contactez-nous !" align="right" style="margin-top:-5px; margin-right:5px; margin-left:0px;" /> 
         <img src="images/accroche-baseline-header-big.png" width="437" height="104" alt="S'informer, participer, agir…" style="margin-left:30px; margin-top:15px;" /> 
-            <div class="onglets"><a href="#ecoles" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Onglet OFF','','images/onglets-ecole-ON.png',1)"><img src="images/onglets.png" name="Onglet OFF" width="881" height="41" border="0" id="Onglet OFF" /></a>
-            </div>
-    </div>
+            
+            <div class="menu">
+            <dl>	
+              <dt><img src="images/onglet-accueil-ON.png" alt="Retour à l'accueil" name="Image4" class="ongletM" id="Image4" style="background-color:#FFF; padding-right:2px; margin-right:-5px; margin-left:-5px;" />
+              </dt>
+            </dl>
+            <!--<dl>	
+              <dt><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','images/onglet-accueil-ON.png',1)" class="ongletM"><img src="images/onglet-accueil-OFF.png" alt="Retour à l'accueil" name="Image4" class="ongletM" id="Image4" /></a>
+              </dt>
+            </dl> -->  
+              
+              <dl>	
+              	<dt><a href="association.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','images/onglet-asso-ON.png',1)" class="ongletM"><img src="images/onglet-asso-OFF.png" alt="L'association" name="Image5" class="ongletM" id="Image5" /></a></dt>
+              </dl>
+              
+              <dl style="width: 122px;">	
+              	<dt><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','images/onglet-ecoles-ON.png',1)" class="ongletM"><img src="images/onglet-ecoles-OFF.png" alt="Les écoles" name="Image6" class="ongletM" id="Image6" /></a></dt>
+                    <dd>
+                            <a href="#" class="sous-menu" >Dumas (élémentaire)</a>
+                            <a href="#"  class="sous-menu">Keller (élémentaire)</a>
+                            <a href="#" class="sous-menu" >Pilâtre (collège)</a>
+                            <a href="#" class="sous-menu" >Popincourt (maternelle)</a>
+                            <a href="#" class="sous-menu" >Saint Bernard (élémentaire)</a>
+                            <a href="ECOLES/titon.html" class="sous-menu" >Titon (élémentaire)</a>
+                            <a href="#" class="sous-menu" >Voltaire (maternelle)</a>
+                            <a href="#" class="sous-menu" >Voltaire (élémentaire)</a>
+                    </dd>
+               </dl>
+               
+              <dl style="width: 150px;">	
+              	<dt><a href="activites.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/onglet-activites-ON.png',1)" class="ongletM"><img src="images/onglet-activites-OFF.png" alt="Les activités" name="Image7" class="ongletM" id="Image7" /></a>
+                </dt>
+                    <dd>
+                            <a href="#" class="sous-menu" >L'atelier Clin d'&OElig;il</a>
+                            <a href="#"  class="sous-menu">Le club Échecs</a>
+                    </dd>
+              </dl>
+              
+              <dl>	
+              	<dt><a href="infos.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','images/onglet-infos-ON.png',1)" class="ongletM"><img src="images/onglet-infos-OFF.png" alt="Les infos" name="Image8" class="ongletM" id="Image8" /></a></dt>
+             </dl> 
+              
+              <dl style="width: 143px;">	
+              	<dt><a href="dossiers.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','images/onglet-dossiers-ON.png',1)" class="ongletM"><img src="images/onglet-dossiers-OFF.png" alt="Les dossiers" name="Image9" class="ongletM" id="Image9" /></a></dt>
+                    <dd>
+                            <a href="#" class="sous-menu" >Le temps péri-scolaire</a>
+                            <a href="#"  class="sous-menu">Le Conservatoire <br />
+							de musique du XI<sup>e</sup></a>
+                    </dd>
+              </dl>
+              
+              <dl>	
+              	<dt><a href="contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','images/onglet-contact-ON.png',1)" class="ongletM"><img src="images/onglet-contact-OFF.png" alt="Contacts" name="Image10" class="ongletM" id="Image10" /></a></dt>
+              </dl>
+           </dl>
+            
+              </div>
+  </div>
 	
     
 <!--*************************** 
@@ -254,7 +308,8 @@ un stage pour découvrir, expérimenter, comprendre, le travail et la vie en ent
                         </p>
                         <p class="ecolespec">
                         Responsable<br />
-                        <font color="#FF6600">François Guedj</font>
+                        <font color="#FF6600">François Guedj</font><br />
+                        <br /><a href="ECOLES/titon.html" title="Vers page école Titon" class="link3">Plus d'infos…</a>
                         </p>
                 	</div>
                     
@@ -341,7 +396,7 @@ un stage pour découvrir, expérimenter, comprendre, le travail et la vie en ent
                     <font color="#FF6600">Thierry Gourdin</font>
                     </p>
                 	</div>
-                  </div>
+    </div>
                   
                   <div class="work">
                     <img src="images/fleche-orange.png" height="60" width="23" align="left" style="margin-top:0px; margin-right:5px;" />
@@ -373,7 +428,8 @@ IMAGE BACKGROUND
             <img src="images/illustration-home.jpg" width="630" alt="BD" />
             </div>
     
-</div>
+
+
             
             
 <!--***********************
@@ -432,6 +488,7 @@ BLOC FOOTER
               </tr>
             </table>
            </div>
+      </div>
 </div>
 </body>
 </html>
